@@ -68,15 +68,12 @@ function Inventory() {
       if (!response.ok) {
         throw new Error("Failed to add item");
       }
-
-      // Assuming the response contains the newly added item
       const addedItem = await response.json();
       setInventoryItems((prevItems) => [...prevItems, addedItem]);
       fetchData();
-      setShowAddModal(false); // Close the add item modal
+      setShowAddModal(false); 
     } catch (error) {
       console.error("Error adding item:", error);
-      // Handle the error (e.g., show an error message)
     }
   };
   const handleDelete = async (id) => {
@@ -208,8 +205,8 @@ function Inventory() {
                           })}
                         >
                           <td>{item.id}</td>
-                          <td>{item?.name}</td>
-                          <td>{item.category.name}</td>
+                          <td>{item.name}</td>
+                          <td>{item.category?.name}</td>
                           <td>{item.price}</td>
                           <td>{item.quantity}</td>
                           <td>{item.threshold}</td>
