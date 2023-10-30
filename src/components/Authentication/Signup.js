@@ -29,7 +29,7 @@ const Signup = () => {
       return;
     }
     try {
-      const response = await fetch("http://localhost:5000/api/user/signup", {
+      const response = await fetch("https://inventory-app-backend-one.vercel.app/api/user/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

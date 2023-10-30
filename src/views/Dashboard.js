@@ -24,7 +24,7 @@ function Dashboard() {
   const hasShownAlert = localStorage.getItem("hasShownAlert");
   const fetchCategories = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/category/get");
+      const response = await fetch("https://inventory-app-backend-one.vercel.app/api/category/get");
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -38,7 +38,7 @@ function Dashboard() {
   };
   const fetchProducts = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/inventory/get");
+      const response = await fetch("https://inventory-app-backend-one.vercel.app/api/inventory/get");
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }

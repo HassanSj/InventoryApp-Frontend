@@ -28,7 +28,7 @@ function Category() {
   const fetchData = async () => {
     try {
       
-      const response = await fetch("http://localhost:5000/api/category/get");
+      const response = await fetch("https://inventory-app-backend-one.vercel.app/api/category/get");
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -44,7 +44,7 @@ function Category() {
   const handleAdd = async (newItem) => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/category/addCategory",
+        "https://inventory-app-backend-one.vercel.app/api/category/addCategory",
         {
           method: "POST",
           headers: {
@@ -73,7 +73,7 @@ function Category() {
       if (result.isConfirmed) {
         try {
           const response = await fetch(
-            `http://localhost:5000/api/category/deleteCategory/${id}`,
+            `https://inventory-app-backend-one.vercel.app/api/category/deleteCategory/${id}`,
             {
               method: "DELETE",
             }
@@ -104,7 +104,7 @@ function Category() {
   const handleSaveEdit = async (updatedItem) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/category/updateCategory/${updatedItem.id}`,
+        `https://inventory-app-backend-one.vercel.app/api/category/updateCategory/${updatedItem.id}`,
         {
           method: "PUT",
           headers: {
