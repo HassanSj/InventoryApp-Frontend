@@ -32,7 +32,7 @@ function User() {
         return;
       }
 
-      const response = await fetch("http://localhost:5000/api/user/getLoggedin", {
+      const response = await fetch("https://inventory-app-backend-one.vercel.app/api/user/getLoggedin", {
         headers: {
           Authorization: `Bearer ${token}`, 
         },
